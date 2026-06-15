@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Înscrieri | Orizonturi Mici</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="logo-image" src="assets/logo.png" alt="Logo Orizonturi Mici" />
+        <div>
+          <h1>Orizonturi Mici</h1>
+          <p>Grădinița Cahul</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="despre-noi.html">Despre Noi</a>
+        <a class="nav-link" href="program.html">Program</a>
+        <a class="nav-link" href="gallery.html">Galerie</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h2>CONTACT &amp; ÎNSCRIERI</h2>
+      </div>
+    </section>
+
+    <section class="inscrieri-section">
+      <div class="container inscrieri-grid">
+        <div>
+          <a href="index.html" class="success-card">
+            <div class="arrow">←</div>
+            <h3>V-ați înscris cu succes!</h3>
+          </a>
+          <p class="redirect-text" id="redirect-message">Vă redirecționăm către pagina principală în 5 secunde...</p>
+        </div>
+        <div class="inscrieri-image">
+          <img src="assets/5.jpg" alt="Locație" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>Orașul Cahul, Republica Moldova</p>
+        <p>Telefon: 067546733</p>
+      </div>
+      <div class="footer-center">
+        <p>© 2026 Orizonturi Mici</p>
+      </div>
+      <div class="footer-right">
+        <p>Proiect de practică: Dornean Maxim (Grupa W 2421)</p>
+        <p>Colegiul „Iulia Hasdeu”</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const countdown = 5;
+    let seconds = countdown;
+    const redirectMessage = document.getElementById('redirect-message');
+
+    if (redirectMessage) {
+      redirectMessage.textContent = `Vă redirecționăm către pagina principală în ${seconds} secunde...`;
+      const interval = setInterval(() => {
+        seconds -= 1;
+        if (seconds <= 0) {
+          clearInterval(interval);
+          window.location.href = 'index.html';
+        } else {
+          redirectMessage.textContent = `Vă redirecționăm către pagina principală în ${seconds} secunde...`;
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
