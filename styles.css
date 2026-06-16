@@ -103,7 +103,17 @@ img {
 .nav-link.active {
   background: var(--blue);
   color: white;
-  box-shadow: 0 8px 20px rgba(29, 85, 214, 0.18);
+  box-shadow: none;
+}
+.main-nav {
+  background: #f2f4f7;
+
+}
+.nav-link {
+  padding: 0.85rem 1.25rem;
+}
+.main-nav {
+  gap: 0.4rem;
 }
 
 .page-hero {
@@ -561,9 +571,12 @@ img {
   text-align: center;
 }
 
-.site-footer p {
-  margin: 0.25rem 0;
-  font-size: 0.95rem;
+.site-footer .row {
+  align-items: start;
+}
+
+.site-footer .col-lg-4:last-child {
+  text-align: right;
 }
 
 @media (max-width: 860px) {
@@ -602,3 +615,4 @@ img {
     justify-content: space-between;
   }
 }
+

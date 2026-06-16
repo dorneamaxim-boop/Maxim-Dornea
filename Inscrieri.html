@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Înscrieri | Orizonturi Mici</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -40,8 +44,12 @@
             <div class="arrow">←</div>
             <h3>V-ați înscris cu succes!</h3>
           </a>
-          <p class="redirect-text" id="redirect-message">Vă redirecționăm către pagina principală în 5 secunde...</p>
+
+          <p class="redirect-text" id="redirect-message">
+            Vă redirecționăm către pagina principală în 5 secunde...
+          </p>
         </div>
+
         <div class="inscrieri-image">
           <img src="assets/5.jpg" alt="Locație" />
         </div>
@@ -55,15 +63,18 @@
         <p>Orașul Cahul, Republica Moldova</p>
         <p>Telefon: 067546733</p>
       </div>
+
       <div class="footer-center">
         <p>© 2026 Orizonturi Mici</p>
       </div>
+
       <div class="footer-right">
         <p>Proiect de practică: Dornean Maxim (Grupa W 2421)</p>
         <p>Colegiul „Iulia Hasdeu”</p>
       </div>
     </div>
   </footer>
+
   <script>
     const countdown = 5;
     let seconds = countdown;
@@ -71,16 +82,24 @@
 
     if (redirectMessage) {
       redirectMessage.textContent = `Vă redirecționăm către pagina principală în ${seconds} secunde...`;
+
       const interval = setInterval(() => {
         seconds -= 1;
+
         if (seconds <= 0) {
           clearInterval(interval);
           window.location.href = 'index.html';
         } else {
-          redirectMessage.textContent = `Vă redirecționăm către pagina principală în ${seconds} secunde...`;
+          redirectMessage.textContent =
+            `Vă redirecționăm către pagina principală în ${seconds} secunde...`;
         }
       }, 1000);
     }
   </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+```
