@@ -8,9 +8,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
     <!-- CSS Personalizat -->
     <link rel="stylesheet" href="styles.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <body>
 
 <header class="site-header py-3">
@@ -74,33 +76,36 @@
                 <div class="col-lg-6">
                     <h3>Trimite o solicitare de înscriere</h3>
 
-                    <form action="Inscrieri.html" method="get">
+                    <form action="https://api.sheetmonkey.io/form/53CdppCAAEYHgS7GfDdZWT" method="POST">
 
-                        <div class="mb-3">
-                            <label class="form-label">Nume Complet Părinte</label>
-                            <input type="text" class="form-control" name="parent-name" placeholder="Nume complet">
-                        </div>
+<input type="hidden" name="x-sheetmonkey-redirect" value="Inscrieri.html">
 
-                        <div class="mb-3">
-                            <label class="form-label">Adresă Email</label>
-                            <input type="email" class="form-control" name="email" placeholder="exemplu@domeniu.md">
-                        </div>
+<div class="mb-3">
+    <label class="form-label">Nume Complet Părinte</label>
+    <input type="text" class="form-control" name="parent-name" placeholder="Nume complet" required>
+</div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Nume Copil &amp; Vârstă</label>
-                            <input type="text" class="form-control" name="child-info" placeholder="Nume copil și vârsta">
-                        </div>
+<div class="mb-3">
+    <label class="form-label">Adresă Email</label>
+    <input type="email" class="form-control" name="email" placeholder="exemplu@domeniu.md" required>
+</div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Mesaj / Mențiuni speciale</label>
-                            <textarea class="form-control" name="message" rows="5" placeholder="Spune-ne mai multe..."></textarea>
-                        </div>
+<div class="mb-3">
+    <label class="form-label">Nume Copil &amp; Vârstă</label>
+    <input type="text" class="form-control" name="child-info" placeholder="Nume copil și vârsta" required>
+</div>
 
-                        <button type="submit" class="btn btn-primary">
-                            Trimite datele
-                        </button>
+<div class="mb-3">
+    <label class="form-label">Mesaj / Mențiuni speciale</label>
+    <textarea class="form-control" name="message" rows="5" placeholder="Spune-ne mai multe..."></textarea>
+</div>
 
-                    </form>
+<button type="submit" class="btn btn-primary">
+    Trimite datele
+</button>
+
+</form>
+
                 </div>
 
                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
@@ -136,9 +141,8 @@
         </div>
     </div>
 </footer>
-
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    
 
 </body>
 </html>
